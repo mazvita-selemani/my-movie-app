@@ -1,14 +1,20 @@
 import React from 'react';
+import {useState , useEffect} from "react";
 import './styles.css';
+import {Link} from "react-router-dom";
+
+
 
 //this file is for react components
+// movie is the props for the MovieCard component
+// react components accepts a single argument which is the props object
 
 const MovieCard = ({movie}) => {
 
     return (
         <div className="movie">
             <div>
-                <p>{movie.Year}</p>
+                <Link to={"/play"}><p>{movie.Year}</p></Link>
             </div>
 
             <div>
