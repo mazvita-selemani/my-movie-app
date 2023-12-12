@@ -12,8 +12,8 @@ const HomePage = () => {
 
     //you can have multiple states or even multiple use effect hooks, there's no limit
     const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('')
-    const [message, setMessage] = useState('')
+    const [searchTerm, setSearchTerm] = useState('');
+    const [message, setMessage] = useState('');
     const searchMovies = async (title) => {
         //this will call the API
         const response = await fetch(`${API_URL}&s=${title}`);
@@ -39,13 +39,13 @@ const HomePage = () => {
 
         setMessage('Welcome to Backyard Films!');
 
-    }
+    };
 
-    const searchExist =  () => {
+    const searchExist = () => {
 
-        return true
+        return true;
 
-    }
+    };
 
     useEffect(() => {
         showMessage();
@@ -53,13 +53,24 @@ const HomePage = () => {
 
     return (
         <div className="app">
-            <h1 onClick={() => {alert('You clicked me!')}}>BackyardFilms</h1>
+            <h1 onClick={() => {
+                alert('You clicked me!');
+            }}>BackyardFilms</h1>
             <div className="search">
                 <input
                     placeholder="Search for movies"
                     value={searchTerm}
-                    onChange={(event) => {setSearchTerm(event.target.value)}}
-                    onClick={() => {setMessage('Search for your movies!')}}
+                    onChange={(event) => {
+                        setSearchTerm(event.target.value);
+                    }}
+                    onClick={() => {
+                        setMessage('Search for your movies!');
+                    }}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            searchMovies(searchTerm);
+                        }
+                    }}
                 />
                 <img
                     src={searchIcon}
@@ -101,4 +112,4 @@ const HomePage = () => {
 
 };
 
-export default HomePage
+export default HomePage;

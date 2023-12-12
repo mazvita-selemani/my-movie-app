@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState , useEffect} from "react";
 import './styles.css';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 
@@ -11,10 +11,12 @@ import {Link} from "react-router-dom";
 
 const MovieCard = ({movie}) => {
 
+    const navigate = useNavigate()
+
     return (
-        <div className="movie">
+        <div className="movie" onClick={() => navigate('/play')}>
             <div>
-                <Link to={"/play"}><p>{movie.Year}</p></Link>
+                <p>{movie.Year}</p>
             </div>
 
             <div>
