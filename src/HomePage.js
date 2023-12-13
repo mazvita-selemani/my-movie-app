@@ -14,6 +14,7 @@ const HomePage = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [message, setMessage] = useState('');
+
     const searchMovies = async (title) => {
         //this will call the API
         const response = await fetch(`${API_URL}&s=${title}`);
@@ -53,9 +54,7 @@ const HomePage = () => {
 
     return (
         <div className="app">
-            <h1 onClick={() => {
-                alert('You clicked me!');
-            }}>BackyardFilms</h1>
+            <h1>BackyardFilms</h1>
             <div className="search">
                 <input
                     placeholder="Search for movies"
