@@ -4,6 +4,7 @@ import './styles.css';
 import searchIcon from './search.svg';
 
 import MovieCard from './MovieCard';
+import FilmProjector from "./FilmProjector";
 
 //going to use an external api, which will give information about the movies
 
@@ -54,7 +55,7 @@ const HomePage = () => {
 
     return (
         <div className="app">
-            <h1>BackyardFilms</h1>
+            <FilmProjector></FilmProjector>
             <div className="search">
                 <input
                     placeholder="Search for movies"

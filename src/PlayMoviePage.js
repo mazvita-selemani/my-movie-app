@@ -1,15 +1,12 @@
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import FilmProjector from "./FilmProjector";
 
 
 const PlayMoviePage = () => {
-    const navigate = useNavigate()
 
     return (
         <div className="app">
-            <h1 onClick={() => {
-               navigate("/");
-            }}>BackyardFilms</h1>
+            <FilmProjector></FilmProjector>
         <div className="player">
         <h2>You're now watching a movie!</h2>
         </div>
