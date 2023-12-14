@@ -1,10 +1,11 @@
 import React, {useRef, useState} from 'react';
 import FilmProjector from "./FilmProjector";
 import {useEffect} from "react";
+import cats from "./cats.mp4"
 
 
 //NOTE: useEffect “delays” a piece of code from running until that render is reflected on the screen
-let VIDEO_SOURCE = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
+let VIDEO_SOURCE = cats;
 
 const PlayMoviePage = () => {
 
@@ -24,7 +25,7 @@ const PlayMoviePage = () => {
             ref.current.pause();
         });
 
-        return <video ref={ref} src={src} height={400} width={400} loop playsInline/>;
+        return <video ref={ref} src={src} height={600} width={600} playsInline/>;
 
     };
 

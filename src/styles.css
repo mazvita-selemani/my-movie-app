@@ -127,15 +127,34 @@ h1 {
     font-size: 4rem;
     position: fixed;
     justify-content: left;
-    color: #EDCA40;
+    color: #EDCA;
     font-family: var(--font-raleway);
 }
 
 .player h2 {
     font-size: 1.25rem;
     position: relative;
+    justify-content: end;
     color: #EDCA40;
     font-family: var(--font-raleway);
+}
+
+.player video {
+    font-size: 1.25rem;
+    position: static;
+    justify-content: center;
+}
+
+.player button {
+    font-size: 1.25rem;
+    position: static;
+    justify-content: center;
+    color: #EDCA40;
+    background: #DE2935;
+    border: solid #EDCA40;
+    width: 90px;
+    height: 60px;
+    border-radius: 12px;
 }
 
 .container {
