@@ -75,12 +75,13 @@ h1 {
 }
 
 .title {
-    width: 100%;
+    width: 80%;
     margin-top: 3rem;
 
     display: flex;
     justify-content: center;
     align-items: baseline;
+    cursor: pointer;
 }
 
 .title h1 {
@@ -91,7 +92,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
-    cursor: pointer;
 }
 
 .title img {
@@ -133,7 +133,7 @@ h1 {
 
 .player h2 {
     font-size: 1.25rem;
-    position: fixed;
+    position: relative;
     color: #EDCA40;
     font-family: var(--font-raleway);
 }
