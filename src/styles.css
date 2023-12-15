@@ -115,47 +115,49 @@ h1 {
 }
 
 .player {
-    width: 100%;
+    width: 60%;
     margin-top: 3rem;
-
     display: flex;
+    flex-direction: column; /* Updated to column layout */
     justify-content: center;
     align-items: center;
-}
-
-.player h1 {
-    font-size: 4rem;
-    position: fixed;
-    justify-content: left;
-    color: #EDCA;
-    font-family: var(--font-raleway);
-}
-
-.player h2 {
-    font-size: 1.25rem;
+    background-color: #3772FF;
     position: relative;
-    justify-content: end;
-    color: #EDCA40;
-    font-family: var(--font-raleway);
+
 }
 
 .player video {
     font-size: 1.25rem;
     position: static;
-    justify-content: center;
+    margin: 0.5rem;
+    overflow: hidden;
+}
+
+.player h2 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-family: var(--font-phosphate);
+    position: absolute;
+    bottom: 15%;
+    right: 30%;
+    margin: 0.5rem;
 }
 
 .player button {
     font-size: 1.25rem;
-    position: static;
-    justify-content: center;
-    color: #EDCA40;
-    background: #DE2935;
-    border: solid #EDCA40;
+    color: #ffffff;
+    background: #080708;
+    border: solid #ffffff;
     width: 90px;
-    height: 60px;
+    height: 40px;
     border-radius: 12px;
+    position: absolute;
+    bottom: 14%;
+    left: 12.65%;
+    margin: 0.5rem;
+    z-index: 1;
 }
+
 
 .container {
     width: 100%;
